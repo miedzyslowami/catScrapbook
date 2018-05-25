@@ -1,0 +1,19 @@
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+    <Page.actionBar>
+        <ActionBar icon="" class="action-bar" hasShadow="false">
+            <Label text="Owner profile"/>
+        </ActionBar>
+    </Page.actionBar>
+    <GridLayout rows="*, auto">
+        <FlexboxLayout class="info-form" row="0" verticalAlignment="center">
+            <Label class="h1" text="Owner's personal data:"/>
+            <TextField hint="Name" text='{{ ownerName }}' secure="false" returnKeyType="done" returnPress="onReturnPress" autocorrect="false" maxLength="30" focus="onFocus" blur="onBlur" class=""/>
+        </FlexboxLayout>
+        <StackLayout row="1">
+            <FlexboxLayout class="bottom-navigation">
+                <Label class="button-left" text="back" tap="backTap"/>
+            </FlexboxLayout>
+        </StackLayout>
+    </GridLayout>
+</Page>

@@ -1,0 +1,14 @@
+@import 'variables';
+
+.page {
+    background-color: $mainBackgroundColor;
+    label{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .cat-font{
+        font-family: 'Fbnyan';
+        font-size: 150px;
+    } 
+}

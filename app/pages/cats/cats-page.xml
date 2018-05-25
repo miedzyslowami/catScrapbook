@@ -1,0 +1,16 @@
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+    <Page.actionBar>
+        <ActionBar icon="" class="action-bar" hasShadow="false">
+            <Label text="Lists of cats"/>
+        </ActionBar>
+    </Page.actionBar>
+    <GridLayout rows="*, auto">
+        <Label class="" text="Cat's list" row="0" verticalAlignment="center"/>
+        <StackLayout  row="1">
+            <FlexboxLayout class="bottom-navigation">
+                <Label class="button-middle" text="back" tap="backTap"/>
+            </FlexboxLayout>
+        </StackLayout>
+    </GridLayout>
+</Page>

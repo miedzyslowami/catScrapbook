@@ -1,6 +1,6 @@
 import { Observable } from "data/observable";
 
-export class MainViewModel extends Observable {
+export class OwnerViewModel extends Observable {
     public ownerName: string;
 
     constructor() {

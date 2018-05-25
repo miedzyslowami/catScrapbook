@@ -1,3 +1,16 @@
-.page {
-    background-color:  pink;
+@import '~/common-styles/action-bar';
+@import '~/common-styles/page';
+@import '~/common-styles/bottom-navigation';
+
+.welcome-cat {
+    flex-direction: column;
+    .cat-font {
+        color: $actionBarBackgroundColor;
+        width: 200;
+    }
+    .welcome-owner {
+        color: $actionBarBackgroundColor;
+        font-size: 30;
+        margin-top: 50;
+    }
 }

@@ -1,0 +1,15 @@
+@import '~/common-styles/action-bar';
+@import '~/common-styles/page';
+@import '~/common-styles/bottom-navigation';
+
+.info-form{
+    flex-direction: column;
+    font-size: $fontSize;
+    padding: 30;
+    .h1{
+        color: black;
+        font-size: 30;
+        font-weight: bold;
+        margin-bottom: 50;
+    }
+}

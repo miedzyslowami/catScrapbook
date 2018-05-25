@@ -1,0 +1,9 @@
+@import 'variables';
+
+.action-bar{
+    background-color: $actionBarBackgroundColor;
+    border-color: transparent;
+    border-width: 1;
+    color: $actionBarFontColor;
+    font-size: $actionBarFontSize;
+}

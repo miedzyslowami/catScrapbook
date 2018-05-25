@@ -1,0 +1,16 @@
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+    <Page.actionBar>
+        <ActionBar icon="" class="action-bar" hasShadow="false">
+            <Label text="Scrapbook"/>
+        </ActionBar>
+    </Page.actionBar>
+    <GridLayout rows="*, auto">
+        <Label class="" text="Scrapbook" row="0" verticalAlignment="center"/>
+        <StackLayout  row="1">
+            <FlexboxLayout class="bottom-navigation">
+                <Label class="button-right" text="back" tap="backTap"/>
+            </FlexboxLayout>
+        </StackLayout>
+    </GridLayout>
+</Page>
