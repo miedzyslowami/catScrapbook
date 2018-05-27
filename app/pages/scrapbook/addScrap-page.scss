@@ -1,0 +1,48 @@
+@import '~/common-styles/action-bar';
+@import '~/common-styles/page';
+@import '~/common-styles/bottom-navigation';
+
+.date-label{
+    color: $actionBarBackgroundColor;
+    font-size: 25;
+    margin-right: 10;
+}
+.date-value{
+    color: $actionBarBackgroundColor;
+    font-size: 25;
+    margin-right: 10;
+    text-align: left;
+    width: 120;
+}
+.event-name{
+    color: $actionBarBackgroundColor;
+    border-width: 3;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-color: $secondarynColor;
+    margin-left: 10;
+    margin-bottom: 15;
+    font-size: 25;
+    width: 150;
+    text-align: left;
+    font-style: italic;
+}
+.image{
+    margin-bottom: 15;
+    border-color: $actionBarBackgroundColor;
+    border-width: 3;
+}
+.event-info{
+    color: $actionBarBackgroundColor;
+    border-width: 3;
+    border-color: $secondarynColor;
+}
+.event-info::hint{
+    color: $actionBarBackgroundColor;
+}
+.info-form{
+    flex-direction: column;
+    font-size: $fontSize;
+    padding: 10;
+}

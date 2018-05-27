@@ -1,0 +1,5 @@
+<Page shownModally="onShownModally" xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+    <StackLayout>
+            <DatePicker date="{{ scrapDate }}" onReturnPress="setScrapDate"/>
+    </StackLayout>
+</Page>

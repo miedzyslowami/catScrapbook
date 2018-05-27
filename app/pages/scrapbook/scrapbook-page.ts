@@ -1,5 +1,5 @@
 import * as frameModule from "ui/frame";
-import { NavigatedData, Page } from "ui/page";
+import { NavigatedData, Page, EventData } from 'ui/page';
 import { View } from "ui/core/view";
 import { ScrapbookViewModel } from "./scrapbook-view-model";
 
@@ -10,4 +10,16 @@ export function navigatingTo(args: NavigatedData) {
 
 export function backTap(args: NavigatedData) {
     frameModule.topmost().goBack();
+}
+
+export function addNew(args: EventData){
+    const page = args.object as Page;
+    const context = "some custom context";
+    page.showModal(
+        "pages/scrapbook/addScrap-page",
+        context,
+        ()=>{},
+        true,
+        false,
+    );
 }

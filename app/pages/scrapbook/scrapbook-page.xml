@@ -6,10 +6,13 @@
         </ActionBar>
     </Page.actionBar>
     <GridLayout rows="*, auto">
-        <Label class="" text="Scrapbook" row="0" verticalAlignment="center"/>
+        <ScrollView>
+        <Label class="" text="Here there will be a list of scrappages" row="0" verticalAlignment="center"/>
+        </ScrollView>
         <StackLayout  row="1">
             <FlexboxLayout class="bottom-navigation">
                 <Label class="button-right" text="back" tap="backTap"/>
+                <Label class="button-left add" text="add" tap="addNew"/>
             </FlexboxLayout>
         </StackLayout>
     </GridLayout>
