@@ -5,7 +5,7 @@ import { AddScrapViewModel } from "./addScrap-view-model";
 import { TextField } from "ui/text-field";
 import { TextView  } from "ui/text-view";
 import { DatePicker } from "tns-core-modules/ui/date-picker";
-import * as imagepicker from "nativescript-imagepicker";
+
 
 let closeCallback: Function;
 
@@ -52,24 +52,29 @@ export function onFocusTextView(args: EventData) {
     const page = args.object as Page;
     const model = page.bindingContext as AddScrapViewModel;
     model.set('backButtonVisibility','collapse');
-    // textField.dismissSoftInput();
-    console.log("onBlur event");
 }
-export function onBlurTextField(args: EventData) {
-   
+export function onBlurTitle(args: EventData) {
+    const textView = args.object as TextField;
+    const page = args.object as Page;
+    const model = page.bindingContext as AddScrapViewModel;
+    model.set("eventName", textView.text);
 }
-export function onBlurTextView(args: EventData) {
-    // blur event will be triggered when the user leaves the TextField
+export function onBlurNote(args: EventData) {
     const textView = args.object as TextView;
     const page = args.object as Page;
     const model = page.bindingContext as AddScrapViewModel;
-    model.set('backButtonVisibility','visible');
-    // textField.dismissSoftInput();
-    console.log("onBlur event");
+    model.set("eventInfo", textView.text);
 }
 
 export function setScrapDate(args: EventData){
     const datePicker = args.object as DatePicker;
     console.log(datePicker);
+}
+
+export function submitTap(args: EventData){
+    const textView = args.object as TextView;
+    const page = args.object as Page;
+    const model = page.bindingContext as AddScrapViewModel;
+    closeCallback(model.eventName, model.eventInfo);
 }
 

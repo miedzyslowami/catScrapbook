@@ -1,3 +1,23 @@
 @import '~/common-styles/action-bar';
 @import '~/common-styles/page';
 @import '~/common-styles/bottom-navigation';
+@import '~/common-styles/variables';
+
+.pages-layout{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 10;
+    padding-top: 10;
+    &::last-of-type{
+        .page-thumbnail{
+            margin-bottom: 100;
+        }
+    }
+    .page-thumbnail{
+        border-width: 2;
+        border-color: $actionBarBackgroundColor;
+        margin-bottom: 10;
+        width: 150;
+       
+    }
+}

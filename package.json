@@ -13,7 +13,8 @@
 		"nativescript-camera": "^4.0.2",
 		"nativescript-imagepicker": "^6.0.2",
 		"nativescript-theme-core": "~1.0.4",
-		"tns-core-modules": "~4.0.0"
+		"tns-core-modules": "~4.0.0",
+		"nativescript-grid-view": "^4.0.0"
 	},
 	"devDependencies": {
 		"babel-traverse": "6.4.5",

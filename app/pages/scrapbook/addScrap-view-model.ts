@@ -21,4 +21,8 @@ export class AddScrapViewModel extends Observable {
         this.eventName = "";
         this.eventInfo = "";
     }
+    public submitTap(eventName, eventInfo){
+        this.eventName = eventName;
+        this.eventInfo = eventInfo;
+    }
 }

@@ -10,14 +10,15 @@
                 <Label class="date-label" text="Date: "/>
                 <Label class="date-value" text="{{ day + '-' + month +'-' + year }}"/>
             </StackLayout>
-            <TextField horizontalAlignment="left" row="1" class="event-name" hint="Event name" text='{{ eventName }}' secure="false" returnKeyType="done" returnPress="onReturnPress" autocorrect="false" maxLength="30" focus="onFocus" blur="onBlur"/>
+            <TextField horizontalAlignment="left" row="1" class="event-name" hint="Event name" text='{{ eventName }}' secure="false" returnKeyType="done" returnPress="onReturnPress" autocorrect="false" maxLength="30" focus="onFocus" blur="onBlurTitle"/>
             <FlexboxLayout class="info-form" row="2" verticalAlignment="center">
                 <Image class="image" src="~/images/cat1.jpg"/>
-                <TextView text='{{ eventInfo }}' hint="Write a note" class="event-info" height="150" focus="onFocusTextView" returnKeyType="done" returnPress="onReturnPress" autocorrect="false" maxLength="30" blur="onBlur"/>
+                <TextView text='{{ eventInfo }}' hint="Write a note" class="event-info" height="150" focus="onFocusTextView" returnKeyType="done" returnPress="onReturnPress" autocorrect="false" maxLength="30" blur="onBlurNote"/>
             </FlexboxLayout>
             <StackLayout row="3">
                 <FlexboxLayout class="bottom-navigation">
                     <Label class="button-left" text="back" tap="backTap" />
+                    <Label class="button-right" text="done" tap="submitTap" />
                 </FlexboxLayout>
             </StackLayout>
         </GridLayout>

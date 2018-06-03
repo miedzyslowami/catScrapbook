@@ -1,15 +1,25 @@
-<Page 
-    xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+    xmlns:gv="nativescript-grid-view" navigatingTo="navigatingTo" class="page">
     <Page.actionBar>
         <ActionBar icon="" class="action-bar" hasShadow="false">
             <Label text="Scrapbook"/>
         </ActionBar>
     </Page.actionBar>
-    <GridLayout rows="*, auto">
-        <ScrollView>
-        <Label class="" text="Here there will be a list of scrappages" row="0" verticalAlignment="center"/>
+    <GridLayout rowas="*, auto">
+      <ScrollView orientation="vertical" row="0">
+            <Repeater items="{{ pages }}" class="pages">
+                <Repeater.itemsLayout>
+                    <FlexboxLayout class="pages-layout"/>
+                </Repeater.itemsLayout>
+                <Repeater.itemTemplate>
+                    <StackLayout class="page-thumbnail">
+                        <Label text="{{ title }}" margin="10" />
+                        <Label text="{{ info }}" margin="10" />
+                    </StackLayout>
+                </Repeater.itemTemplate>
+            </Repeater>
         </ScrollView>
-        <StackLayout  row="1">
+        <StackLayout row="1" verticalAlignment="bottom">
             <FlexboxLayout class="bottom-navigation">
                 <Label class="button-right" text="back" tap="backTap"/>
                 <Label class="button-left add" text="add" tap="addNew"/>
